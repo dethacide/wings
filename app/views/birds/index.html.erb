@@ -3,13 +3,13 @@
 <h1>Birds</h1>
 
 <table>
- <p>hi</p>
+
   <thead>
     <tr>
       <th>Species</th>
       <th>Location</th>
       <th>Date</th>
-      <th>Image url</th>
+      <th>Image</th>
       <th>Birder</th>
       <th colspan="3"></th>
     </tr>
@@ -18,16 +18,17 @@
   <tbody>
     <% @birds.each do |bird| %>
       <tr>
-        <td><%= bird.species %></td>
-        <td><%= bird.location %></td>
-        <td><%= bird.date %></td>
-        <td><%= bird.image_url %></td>
-        <td><%= bird.birder %></td>
+        <td class="species"><%= bird.species %></td>
+        <td class="location"><%= bird.location %></td>
+        <td class="date"><%= bird.date %></td>
+        <td class="bird-image"><img src="<%= bird.image_url %>" alt="Smiley face" height="auto" width="50%"></td>
+        <td class="user"><%= bird.birder %></td>
         <td><%= link_to 'Show', bird %></td>
         <td><%= link_to 'Edit', edit_bird_path(bird) %></td>
         <td><%= link_to 'Destroy', bird, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+
   </tbody>
 </table>
 
