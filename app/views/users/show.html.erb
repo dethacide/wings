@@ -15,5 +15,17 @@
   <%= @user.password %>
 </p>
 
+<p>
+  <strong>Bird Sightings</strong>
+  <% @user.birds.each do |bird|%>
+  <ul>
+  	<li><%= bird.species %></li>
+  	<li><%= bird.location %></li>
+  	<li><%= bird.date %></li>
+  </ul>	
+  <% end %>
+</p>
+	
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

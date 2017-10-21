@@ -8,7 +8,7 @@
       <th>Species</th>
       <th>Location</th>
       <th>Date</th>
-      <th>Image url</th>
+      <th>Image</th>
       <th>Birder</th>
       <th colspan="3"></th>
     </tr>
@@ -20,7 +20,7 @@
         <td><%= bird.species %></td>
         <td><%= bird.location %></td>
         <td><%= bird.date %></td>
-        <td><%= bird.image_url %></td>
+        <td><%= image_tag(bird.image_url, size:100) %></td>
         <td><%= bird.birder %></td>
         <td><%= link_to 'Show', bird %></td>
         <td><%= link_to 'Edit', edit_bird_path(bird) %></td>
