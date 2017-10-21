@@ -1,0 +1,42 @@
+<%= form_with(model: bird, local: true) do |form| %>
+  <% if bird.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bird.errors.count, "error") %> prohibited this bird from being saved:</h2>
+
+      <ul>
+      <% bird.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :species %>
+    <%= form.text_field :species, id: :bird_species %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :bird_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date, id: :bird_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, id: :bird_image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birder %>
+    <%= form.text_field :birder, id: :bird_birder %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
