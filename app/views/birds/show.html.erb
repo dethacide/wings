@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
+<div class="row px-5">
+  <div class="col-sm-4">
 
-<p>
-  <strong>Species:</strong>
-  <%= @bird.species %>
-</p>
+    <p>
+      <strong>Species:</strong>
+      <%= @bird.species %>
+    </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @bird.location %>
-</p>
+    <p>
+      <strong>Location:</strong>
+      <%= @bird.location %>
+    </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @bird.date %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @bird.image_url %>
-</p>
-
-<p>
-  <strong>Birder:</strong>
-  <%= @bird.birder %>
-</p>
-
+    <p>
+      <strong>Date:</strong>
+      <%= @bird.date %>
+    </p>
+    <p>
+      <strong>Birder:</strong>
+      <%= @bird.birder %>
+    </p>
+  </div>
+  <div class="col-sm-8">
+    <img src="<%= @bird.image_url %>" alt="bird"/>
+  </div>
+</div>
+<div class="navigation">
 <%= link_to 'Edit', edit_bird_path(@bird) %> |
 <%= link_to 'Back', birds_path %>
+</div>

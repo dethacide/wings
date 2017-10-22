@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" id="species">
     <%= form.label :species %>
     <%= form.text_field :species, id: :bird_species %>
   </div>
 
-  <div class="field">
+  <div class="field" id="location">
     <%= form.label :location %>
     <%= form.text_field :location, id: :bird_location %>
   </div>
 
-  <div class="field">
+  <div class="field" id="date">
     <%= form.label :date %>
     <%= form.text_field :date, id: :bird_date %>
   </div>
 
-  <div class="field">
+  <div class="field" id="image_url">
     <%= form.label :image_url %>
     <%= form.text_field :image_url, id: :bird_image_url %>
   </div>
 
-  <div class="field">
+  <div class="field" id="birder">
     <%= form.label :birder %>
     <%= form.text_field :birder, id: :bird_birder %>
   </div>
 
-  <div class="actions">
+  <div class="actions" id="submit">
     <%= form.submit %>
   </div>
 <% end %>
