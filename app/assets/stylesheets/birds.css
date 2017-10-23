@@ -2,3 +2,81 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-family: fantasy !important;
+    padding: 20px 0px;
+    color: aliceblue;
+}
+
+body {
+    background-image: url(https://static.pexels.com/photos/172292/pexels-photo-172292.jpeg);
+    width: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+  }
+.card img {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 23%;
+}
+.navigation {
+    text-align: center;
+    padding-left: 427px;
+  }
+label {
+    padding-left: 788px;
+        color: aliceblue;
+  }
+input#bird_species {
+    padding-left: 10px;
+}
+input#bird_date {
+    padding-left: 33px;
+}
+input#bird_birder {
+    padding-left: 24px;
+}
+input#bird_location {
+    padding-left: 4px;
+}
+div#submit {
+    padding-left: 787px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 6rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: inherit;
+  }
+
+
+a {
+    color: ivory;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-text-decoration-skip: objects;
+  
+}
+p span {
+    font-size: 26px;
+    padding-left: 27px;
+}
+.card {
+    background-color: transparent !important;
+}
+
+.card-body {
+    background: rgba(0, 0, 0, 0.2) !important;
+    color: aliceblue;
+}
+.btn-primary {
+    color: #fff;
+    background-color: rgba(248, 249, 250, 0.31) !important;
+    border-color: rgba(255, 0, 3, 0) !important;
+}
+.info{
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: aliceblue;
+}

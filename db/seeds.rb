@@ -1,6 +1,4 @@
 
-  
-
  karen = User.create(name: "Karen", email: "karen@hotmail.com", password:"birds123")
  josh = User.create(name:"Josh", email:"josh@hotmail.com", password:"password")
  auston = User.create(name:"Auston", email:"auston@somemail.com", password:"birdsrgreat")
@@ -20,4 +18,4 @@
  Bird.create(species:"Black-throated Blue Warbler", location:"Highlands Park", date:"10-17-17", image_url:"http://bit.ly/2xXAJLU", user_id:pk.id)
  
  
- 
+
