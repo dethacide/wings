@@ -14,7 +14,8 @@ class BirdsController < ApplicationController
 
   # GET /birds/new
   def new
-    @bird = Bird.new
+   @user = User.find(params[:user_id])
+    @bird = @user.birds.new
   end
 
   # GET /birds/1/edit
@@ -24,13 +25,14 @@ class BirdsController < ApplicationController
   # POST /birds
   # POST /birds.json
   def create
-     user = User.find_by(name: bird_params[:birder])
-    @bird = Bird.new(bird_params)
-    @bird.user_id = user.id
+     # user = User.find_by(name: bird_params[:birder])
+     user = User.find(params[:user_id])
+    @bird = user.birds.new(bird_params)
+
 
     respond_to do |format|
       if @bird.save
-        format.html { redirect_to @bird, notice: 'Bird was successfully created.' }
+        format.html { redirect_to user_path(user), notice: 'Bird was successfully created.' }
         format.json { render :show, status: :created, location: @bird }
       else
         format.html { render :new }

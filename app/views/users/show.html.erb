@@ -22,10 +22,11 @@
   	<li><%= bird.species %></li>
   	<li><%= bird.location %></li>
   	<li><%= bird.date %></li>
-  </ul>	
+  </ul>
   <% end %>
 </p>
 	</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+<%= link_to 'Create Bird', new_user_bird_path(@user)%>
