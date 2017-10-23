@@ -25,5 +25,6 @@
   <%= @bird.birder %>
 </p>
 
-<%= link_to 'Edit', edit_bird_path(@bird) %> |
+<%= link_to 'Edit', edit_user_bird_path(@bird.user, @bird) %> |
 <%= link_to 'Back', birds_path %>
+

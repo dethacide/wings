@@ -21,10 +21,10 @@
         <td><%= bird.location %></td>
         <td><%= bird.date %></td>
         <td><%= image_tag(bird.image_url, size:100) %></td>
-        <td><%= bird.birder %></td>
-        <td><%= link_to 'Show', bird %></td>
-        <td><%= link_to 'Edit', edit_bird_path(bird) %></td>
-        <td><%= link_to 'Destroy', bird, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to bird.user.name, user_path(bird.user) %></td>
+        <td><%= link_to 'Show', user_bird_path(bird.user, bird) %></td>
+        <td><%= link_to 'Edit', edit_user_bird_path(bird.user, bird) %></td>
+        <td><%= link_to 'Destroy', user_bird_path(bird.user, bird), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,9 @@
 
 <br>
 
-<%= link_to 'New Bird', new_bird_path %>
+
+
+
+
+
+

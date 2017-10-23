@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :birds
-  resources :users
 
- 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+resources :birds, only: [:index]
+resources :users do
+resources :birds
+
+ end
 end
