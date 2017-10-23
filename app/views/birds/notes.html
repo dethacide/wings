@@ -1,0 +1,33 @@
+<% @birds.each do |bird| %>
+
+
+<div class="card" style="width: 20rem;">
+  <img src="<%= bird.image_url %>" alt="bird"/>
+  <div class="card-body">
+    <h4 class="card-title"><%= bird.species %></h4>
+    <div class="card-text">
+    	<p>
+    		<strong>Birder</strong><%= bird.birder %>
+    	</p>
+    	<p>
+    		<strong>Species</strong><%= bird.species %>
+    	</p>
+    	<p>
+    		<strong>Location</strong><%= bird.location %>
+    	</p>
+    	<p>
+    		<strong>Date</strong><%= bird.date %>
+    	</p>
+    	<p>
+    		<strong>Image</strong><%= bird.img %>
+    	</p>
+    </div>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+        <div><%= link_to 'Show', bird %></div>
+        <div><%= link_to 'Edit', edit_bird_path(bird) %></div>
+        <div><%= link_to 'Destroy', bird, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    <% end %>
