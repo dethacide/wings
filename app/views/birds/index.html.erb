@@ -8,7 +8,7 @@
          <h4 class="card-title"><%= bird.species %></h4>
          <div class="card-text">
            <p>
-             <strong>Birder: </strong><span><%= bird.birder %></span>
+             <strong>Birder: </strong><span><%= link_to bird.user.name, user_path(bird.user) %></span>
            </p>
            <p>
              <strong>Species: </strong><span><%= bird.species %></span>
@@ -20,14 +20,14 @@
              <strong>Date: </strong><span><%= bird.date %></span>
            </p>
          </div>
-         <button class="btn btn-primary"><span><%= link_to 'Show', bird %></span></button>
+         <button class="btn btn-primary"><span><%= link_to 'Show', user_bird_path(bird.user, bird) %></span></button>
        </div>
        <div></div>
-       <div><%= link_to 'Edit', edit_bird_path(bird) %> |
-         <%= link_to 'Destroy', bird, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+       <div><%= link_to 'Edit', edit_user_bird_path(bird.user, bird) %> |
+         <%= link_to 'Destroy', user_bird_path(bird.user, bird), method: :delete, data: { confirm: 'Are you sure?' } %></div>
        </div>
      </div>
      <% end %>
    </div>
   </div>
-<%= link_to 'New Bird', new_bird_path %>
+<%#= link_to 'New Bird', new_user_bird_path(@bird.user, @bird) %>

@@ -2,5 +2,5 @@
 
 <%= render 'form', bird: @bird %>
 
-<%= link_to 'Show', @bird %> |
+<%= link_to 'Show', user_bird_path(@bird.user, @bird) %> |
 <%= link_to 'Back', birds_path %>
