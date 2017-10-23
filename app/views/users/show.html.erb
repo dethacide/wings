@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="user_information">
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -25,7 +25,7 @@
   </ul>	
   <% end %>
 </p>
-	
+	</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

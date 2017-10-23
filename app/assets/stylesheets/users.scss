@@ -1,3 +1,45 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+tr {
+    font-size: x-large;
+    text-align: -webkit-center;
+    font-style: oblique;
+    color: aliceblue;
+}
+
+table {
+	margin: 0px auto;
+}
+
+h1 {
+    color: aliceblue !important;
+}
+
+
+.user_information p {
+    color: aliceblue !important;
+    font-size: 28px;
+}
+
+.btn-info {
+    color: rgba(255, 255, 255, 0.06) !important;
+    background-color: rgba(23, 162, 184, 0) !important;
+    border-color: transparent !important;
+}
+
+input[type="submit"] {
+    background-color: rgba(240, 248, 255, 0.17);
+    color: aliceblue;
+}
+.actions {
+    text-align: center;
+}
+
+
+
+
+
+
+
