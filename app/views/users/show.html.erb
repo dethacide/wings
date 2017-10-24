@@ -18,7 +18,7 @@
 <p>
   <strong>Bird Sightings</strong>
   <% @user.birds.each do |bird|%>
-  <ul>
+  <ul class="back" >
   	<li><%= bird.species %></li>
   	<li><%= bird.location %></li>
   	<li><%= bird.date %></li>
@@ -27,6 +27,8 @@
 </p>
 	</div>
 
+<div class="back">
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 <%= link_to 'Create Bird', new_user_bird_path(@user)%>
+</div>

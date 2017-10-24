@@ -14,18 +14,20 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.password %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     <div class="container" >
+      <tr class="table" >
+        <td class="uname" ><%= user.name %></td>
+        <td class="uemail" ><%= user.email %></td>
+        <td class="upassword" ><%= user.password %></td>
+        <td class="show" ><%= link_to 'Show', user %></td>
+        <td class="edit" ><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td class="destroy" ><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+     </div>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<div class="nuser" ><%= link_to 'New User', new_user_path %></div>
