@@ -1,21 +1,22 @@
  <p id="notice"><%= notice %></p>
  <div class="row px-5">
    <div class="col-sm-4 info">
-     <p>
+
+     <p class="show_sp">
        <strong>Species:</strong>
        <%= @bird.species %>
      </p>
-     <p>
+     <p class="show_lo">
        <strong>Location:</strong>
        <%= @bird.location %>
      </p>
-     <p>
+     <p class="show_da">
        <strong>Date:</strong>
        <%= @bird.date %>
      </p>
-     <p>
+     <p class="show_bi">
        <strong>Birder:</strong>
-       <%= @bird.birder %>
+       <%= @user.name %>
      </p>
    </div>
    <div class="col-sm-8">

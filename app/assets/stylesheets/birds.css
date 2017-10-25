@@ -91,3 +91,35 @@ label#bird_birder {
 .back a, .back a:visited {
  color: aliceblue;
 }
+div {
+    color: aliceblue;
+}
+span a{
+    color: aliceblue;
+}
+a {
+    color: aliceblue !important;
+}
+p.show_sp {
+    height: 27px;
+    font-size: 27px;
+    margin-top: 82px;
+}
+p.show_lo {
+    height: 27px;
+    font-size: 27px;
+}
+p.show_da {
+    height: 27px;
+    font-size: 27px;
+}
+p.show_bi {
+    height: 27px;
+    font-size: 27px;
+}
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 45px;
+}

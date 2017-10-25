@@ -1,5 +1,10 @@
 class BirdsController < ApplicationController
   before_action :set_bird, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+
+  def home
+
+  end
 
   # GET /birds
   # GET /birds.json
@@ -10,6 +15,7 @@ class BirdsController < ApplicationController
   # GET /birds/1
   # GET /birds/1.json
   def show
+   @user = User.find(params[:user_id])
   end
 
   # GET /birds/new
@@ -20,6 +26,7 @@ class BirdsController < ApplicationController
 
   # GET /birds/1/edit
   def edit
+   @user = User.find(params[:user_id])
   end
 
   # POST /birds
@@ -44,9 +51,10 @@ class BirdsController < ApplicationController
   # PATCH/PUT /birds/1
   # PATCH/PUT /birds/1.json
   def update
+   @user = User.find(params[:user_id])
     respond_to do |format|
       if @bird.update(bird_params)
-        format.html { redirect_to @bird, notice: 'Bird was successfully updated.' }
+        format.html { redirect_to [@user, @bird], notice: 'Bird was successfully updated.' }
         format.json { render :show, status: :ok, location: @bird }
       else
         format.html { render :edit }
@@ -58,6 +66,7 @@ class BirdsController < ApplicationController
   # DELETE /birds/1
   # DELETE /birds/1.json
   def destroy
+
     @bird.destroy
     respond_to do |format|
       format.html { redirect_to birds_url, notice: 'Bird was successfully destroyed.' }
